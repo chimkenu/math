@@ -1,0 +1,24 @@
+#score > p {
+    font-size: large;
+    padding: 0em 1em;
+}
+
+#time-elapsed {
+    color: gray;
+    font-size: large;
+}
+
+#rights {
+    color: green;
+}
+
+#wrongs {
+    color: red;
+}
+
+input {
+    margin: 1em;
+    width: 3em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: xx-large;
+}

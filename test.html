@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function shuffle(array) {
+            var i = array.length,
+                j = 0,
+                temp;
+
+            while (i--) {
+
+                j = Math.floor(Math.random() * (i+1));
+
+                // swap randomly chosen element with current element
+                temp = array[i];
+                array[i] = array[j];
+                array[j] = temp;
+
+            }
+
+            return array;
+        }
+
+        while (true) {
+            var digits = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+            shuffle(digits);
+
+            var a = 0;
+            var b = 0;
+
+            for (var i = 0; i < 5; i++) {
+                a += 10**i * digits.pop();
+            }
+
+            for (var i = 0; i < 4; i++) {
+                b += 10**i * digits.pop();
+            }
+
+            const answer = a - b;
+            console.log(a + " - " + b + " = " + answer);
+            if (answer == 33333) {
+                break;
+            }
+        }
+    </script>
+</body>
+</html>

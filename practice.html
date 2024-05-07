@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/practice.css">
+    <script src="js/practice.js"></script>
+    <audio id="right-answer" src="sounds/right.mp3" preload="auto"></audio>
+    <audio id="wrong-answer" src="sounds/wrong.mp3" preload="auto"></audio>
+    <script>
+        document.getElementById("background-music").volume = 0.2;
+        document.getElementById("right-answer").volume = 0.1;
+        document.getElementById("wrong-answer").volume = 0.1;
+    </script>
+</head>
+<body>
+    <audio controls autoplay loop hidden preload="auto" id="background-music" src="sounds/practice_music.mp3"></audio>
+    <div id="training-area">
+        <div>
+            <div id="question-area">
+                <section id="number"></section>
+                <section id="asking">
+                    <p id="question">Question?</p>
+                </section>
+            </div>
+            <section id="score">
+                <p id="rights">0</p>
+                <p id="time-elapsed">0</p>
+                <p id="wrongs">0</p>
+            </section>
+        </div>
+    </div>
+    <script>generateQuestion()</script>
+</body>
+</html>
